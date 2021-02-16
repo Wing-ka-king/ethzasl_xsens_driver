@@ -1,0 +1,7 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/akash/Documents/rcve/catkin_ws2/devel/lib/python3/dist-packages",
+        "/home/akash/Documents/rcve/catkin_ws1/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}

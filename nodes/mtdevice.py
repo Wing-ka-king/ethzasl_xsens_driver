@@ -72,7 +72,7 @@ class MTDevice(object):
             pass
         try:
             self.device.write(msg)
-        except serial.serialutil.SerialTimeoutException:
+        except serial.serialutil.serialTimeoutException:
             raise MTTimeoutException("writing message")
         if self.verbose:
             print("MT: Write message id 0x%02X (%s) with %d data bytes: "\
@@ -1255,7 +1255,7 @@ Commands:
 
 Generic options:
     -d, --device=DEV
-        Serial interface of the device (default: /dev/ttyUSB0). If 'auto', then
+        serial interface of the device (default: /dev/ttyUSB0). If 'auto', then
         all serial ports are tested at all baudrates and the first
         suitable device is used.
     -b, --baudrate=BAUD
@@ -1685,7 +1685,7 @@ def main():
         try:
             mt = MTDevice(device, baudrate, timeout=timeout, verbose=verbose,
                           initial_wait=initial_wait)
-        except serial.SerialException:
+        except serial.serialException:
             raise MTException("unable to open %s" % device)
         # execute actions
         if 'inspect' in actions:

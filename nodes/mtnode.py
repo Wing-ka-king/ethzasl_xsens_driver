@@ -169,7 +169,7 @@ class XSensDriver(object):
                 self.reset_vars()
         # Ctrl-C signal interferes with select with the ROS signal handler
         # should be OSError in python 3.?
-        except (select.error, OSError, serial.serialutil.SerialException):
+        except (select.error, OSError, serial.serialutil.serialException):
             pass
 
     def spin_once(self):
